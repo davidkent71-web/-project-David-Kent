@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kartu Fakta Menarik — Teknologi</title>
+  <style>
+     body{
+                background-color:ghostwhite;
+            }
+
+            p{
+                background-color: blue;
+                color: yellow
+                
+            } 
+  </style>
+</head>
+<body>
+  
+  <div class="card-fakta">
+    <img id="factImage" src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="Ilustrasi teknologi modern" />
+    <div class="content">
+      <h2>Fakta Menarik tentang Sosialita</h2>
+      <p class="subtitle">Tahukah kamu fakta-fakta unik ini?</p>
+
+
+      <ul class="facts-list" id="factList">
+        <li>Komputer pertama berukuran sebesar satu ruangan dan beratnya lebih dari 27 ton!</li>
+        <li>Setiap 2 detik, ada lebih dari 100.000 pencarian baru di Google di seluruh dunia.</li>
+        <li>iPhone pertama kali diluncurkan pada tahun 2007 dan mengubah cara orang berinteraksi dengan teknologi seluler.</li>
+        <li>AI kini membantu dokter mendiagnosis penyakit lebih cepat dan akurat.</li>
+      </ul>
+
+
+      <button class="btn-next" id="nextFact">🔁 Fakta Selanjutnya</button>
+
+
+      <div class="card-footer">© 2025 | Fakta Teknologi • Informatika SMP</div>
+    </div>
+  </div>
+
+
+  <script>
+    const factData = [
+      {
+        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop",
+        facts: [
+          "Sosialita sering kali dikenal karena gaya hidup mewah dan status sosial tinggi yang ia miliki",
+          "Mereka sering terlibat dalam acara sosial, seperti gala, pesta amal, atau peluncuran produk mewah",
+          "Popularitas sosialita sering dipengaruhi oleh penampilan, koneksi dengan tokoh penting, dan keberadaan di media sosial"
+         
+        ]
+      },
+      {
+        image: "https://images.unsplash.com/photo-1581093588401-22c38b3036d7?q=80&w=800&auto=format&fit=crop",
+        facts: [
+          "Banyak sosialita yang terlahir dari keluarga kaya atau selebriti, namun beberapa berhasil mencapai status sosialita melalui usaha dan hubungan.",
+          "Dunia sosialita juga sangat kompetitif, dimana mereka saling berusaha menunjukkan kekayaan dan prestise mereka",
+          "mereka cenderung memiliki akses ke dunia hiburan, seni, dan bisnis, menjadikannya sosok yang dikenal di berbagai kalangan"
+        ]
+      },
+      {
+        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop",
+        facts: [
+          "Sosialita sering menjadi inspirasi bagi tren mode dan gaya hidup, baik melalui pemakaian desainer maupun kebiasaan yang mereka tunjukkan",
+          "Kehidupan pribadi sosialita sering menjadi sorotan media, baik dalam bentuk pemberitaan atau program reality show",
+          "Walaupun terkesan glamour, banyak sosialita yang mengelola bisnis keluarga atau terlibat dalam kegiatan filantropi untuk memberi dampak positif"
+        ]
+      },
+      {
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop",
+        facts: [
+          "Teknologi cloud memungkinkan kita menyimpan file tanpa harddisk fisik.",
+          "Bahasa pemrograman pertama dibuat pada tahun 1950-an.",
+          "AI generatif dapat membantu membuat karya seni digital dan video."
+        ]
+      }
+    ];
+
+
+    const factList = document.getElementById("factList");
+    const factImage = document.getElementById("factImage");
+    const nextBtn = document.getElementById("nextFact");
+
+
+    nextBtn.addEventListener("click", () => {
+      factList.classList.add("fade-out");
+      setTimeout(() => {
+        const randomFact = factData[Math.floor(Math.random() * factData.length)];
+        factImage.style.opacity = 0;
+
+
+        setTimeout(() => {
+          factImage.src = randomFact.image;
+          factImage.style.opacity = 1;
+        }, 400);
+
+
+        factList.innerHTML = randomFact.facts.map(f => `<li>${f}</li>`).join("");
+        factList.classList.remove("fade-out");
+      }, 500);
+    });
+  </script>
+
+
+</body>
+</html>
+
+
+e html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kartu Fakta Menarik — Teknologi</title>
+  <style>
+  </style>
+</head>
+<body>
+
+
+  <div class="card-fakta">
+    <img id="factImage" src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="Ilustrasi teknologi modern" />
+    <div class="content">
+      <h2>Fakta Menarik tentang Teknologi</h2>
+      <p class="subtitle">Tahukah kamu fakta-fakta unik ini?</p>
+
+
+      <ul class="facts-list" id="factList">
+        <li>Komputer pertama berukuran sebesar satu ruangan dan beratnya lebih dari 27 ton!</li>
+        <li>Setiap 2 detik, ada lebih dari 100.000 pencarian baru di Google di seluruh dunia.</li>
+        <li>iPhone pertama kali diluncurkan pada tahun 2007 dan mengubah cara orang berinteraksi dengan teknologi seluler.</li>
+        <li>AI kini membantu dokter mendiagnosis penyakit lebih cepat dan akurat.</li>
+      </ul>
+
+
+      <button class="btn-next" id="nextFact">🔁 Fakta Selanjutnya</button>
+
+
+      <div class="card-footer">© 2025 | Fakta Teknologi • Informatika SMP</div>
+    </div>
+  </div>
+
+
+  <script>
+    const factData = [
+      {
+        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop",
+        facts: [
+          "Robot kini dapat meniru ekspresi wajah manusia dengan sangat realistis.",
+          "Beberapa mobil listrik modern bisa memperbarui sistemnya lewat internet, seperti HP!",
+          "Dunia memiliki lebih dari 6 miliar ponsel aktif setiap harinya."
+         
+        ]
+      },
+      {
+        image: "https://images.unsplash.com/photo-1581093588401-22c38b3036d7?q=80&w=800&auto=format&fit=crop",
+        facts: [
+          "Internet pertama kali dibuat untuk menghubungkan universitas di AS pada tahun 1969.",
+          "Email pertama dikirim lebih dari 50 tahun yang lalu!",
+          "Sekitar 90% data dunia diciptakan dalam dua tahun terakhir."
+        ]
+      },
+      {
+        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop",
+        facts: [
+          "AI digunakan untuk menciptakan musik dan lukisan digital.",
+          "Superkomputer modern dapat melakukan triliunan perhitungan per detik.",
+          "VR (Virtual Reality) digunakan untuk melatih dokter dan pilot pesawat."
+        ]
+      },
+      {
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop",
+        facts: [
+          "Teknologi cloud memungkinkan kita menyimpan file tanpa harddisk fisik.",
+          "Bahasa pemrograman pertama dibuat pada tahun 1950-an.",
+          "AI generatif dapat membantu membuat karya seni digital dan video."
+        ]
+      }
+    ];
+
+
+    const factList = document.getElementById("factList");
+    const factImage = document.getElementById("factImage");
+    const nextBtn = document.getElementById("nextFact");
+
+
+    nextBtn.addEventListener("click", () => {
+      factList.classList.add("fade-out");
+      setTimeout(() => {
+        const randomFact = factData[Math.floor(Math.random() * factData.length)];
+        factImage.style.opacity = 0;
+
+
+        setTimeout(() => {
+          factImage.src = randomFact.image;
+          factImage.style.opacity = 1;
+        }, 400);
+
+
+        factList.innerHTML = randomFact.facts.map(f => `<li>${f}</li>`).join("");
+        factList.classList.remove("fade-out");
+      }, 500);
+    });
+  </script>
+
+
+</body>
+</html>
